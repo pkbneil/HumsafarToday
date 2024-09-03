@@ -67,7 +67,7 @@ rag_chain = (
 # Add a logo at the top
 st.image('FinalLogo_Accenture.jpg', width=100)  # Replace with the path to your logo
 
-st.title('Humsafar: Your Hyper-Personalized AI Chatbot')
+st.subheader("Humsafar: Your Hyper-Personalized AI Chatbot", divider="violet")
 
 st.markdown("""
 Welcome to the Accenture Humsafar Chatbot! This AI-powered assistant is here to help you with various aspects of well-being and professional growth.
