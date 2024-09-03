@@ -2,10 +2,15 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
-os.environ['LANGCHAIN_API_KEY'] = st.secrets["LANGCHAIN_API_KEY"]
+# Load environment variables from secrets management
+openai_api_key = st.secrets["openai"]["OPENAI_API_KEY"]
+langchain_api_key = st.secrets["langchain_api"]["LANGCHAIN_API_KEY"]
+langchain_project_name = st.secrets["langchain_project"]["LANGCHAIN_PROJECT"]
+
+os.environ['OPENAI_API_KEY'] = openai_api_key
+os.environ['LANGCHAIN_API_KEY'] = langchain_api_key
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
-os.environ['LANGCHAIN_PROJECT'] = st.secrets["LANGCHAIN_PROJECT"]
+os.environ['LANGCHAIN_PROJECT'] = langchain_project_name
 
 from langchain_community.document_loaders import PyPDFLoader
 loader = PyPDFLoader('AccentureProjectInformation.pdf')
