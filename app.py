@@ -1,5 +1,7 @@
 import os
 from dotenv import load_dotenv
+import streamlit as st
+
 load_dotenv()
 
 # Load environment variables from secrets management
@@ -62,8 +64,6 @@ rag_chain = (
 
 ## Streamlit code
 
-import streamlit as st
-
 # Add a logo at the top
 st.image('FinalLogo_Accenture.jpg', width=100)  # Replace with the path to your logo
 
@@ -94,3 +94,5 @@ if input_text:
 st.markdown("""
 *Disclaimer: This chatbot is an internal tool designed for informational purposes. For personalized advice, please consult a professional.*
 """)
+
+
