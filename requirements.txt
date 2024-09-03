@@ -3,3 +3,8 @@ langchain
 openai
 faiss-cpu
 python-dotenv
+langchain_community
+langchain-text-splitters
+pypdf
+langchain-text-splitters
+langchain-openai
