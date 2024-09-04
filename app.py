@@ -30,7 +30,7 @@ from langchain_community.vectorstores import FAISS
 vectorStoreDb = FAISS.from_documents(documents, embeddings)
 
 from langchain_openai import ChatOpenAI
-llm = ChatOpenAI(model='gpt-4o')
+llm = ChatOpenAI(model='gpt-4o-mini')
 
 from langchain.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
